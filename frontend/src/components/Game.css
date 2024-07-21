@@ -1,0 +1,24 @@
+.selected {
+    background-clip: padding-box;
+    background-color: lightgray;
+}
+
+.yatta {
+    font-size: 100px;
+}
+
+.table {
+    width: 500px;
+}
+
+table th.title {
+    background-color: #EEEEEE;
+}
+
+table td {
+    transition: background-color 0.5s ease; /* color transition */
+}
+
+table td.completed {
+    background-color: #FFFAA0;
+}

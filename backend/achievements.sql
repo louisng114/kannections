@@ -1,0 +1,21 @@
+INSERT INTO achievements (code, name, description)
+VALUES 
+    ('w1', 'First Win!', 'Win a game'),
+    ('w3', 'More Wins!', 'Win a total of three games'),
+    ('w5', 'Let''s GO!', 'Win a total of five games'),
+    ('w10', 'Even More Wins', 'Win a total of ten games'),
+    ('w30', 'That''s a Lot of Wins', 'Win a total of thirty games'),
+    ('w50', 'The Zen Zone', 'Win a total of fifty games'),
+    ('p1', 'First Perfect Win!', 'Win a perfect game'),
+    ('p3', 'Pin-Point Precision', 'Win a total of three perfect games'),
+    ('p5', 'P-P-P-P-Perfect!', 'Win a total of five perfect games'),
+    ('p10', 'Perfect TEN!', 'Win a total of ten perfect games'),
+    ('p30', 'Practice-Made Perfect', 'Win a total of ten perfect games'),
+    ('l4', 'JLPT 4 Practice', 'Win a game at JLPT4 or harder'),
+    ('l3', 'JLPT 3 Practice', 'Win a game at JLPT3 or harder'),
+    ('l2', 'JLPT 2 Practice', 'Win a game at JLPT2 or harder'),
+    ('l1', 'JLPT 1 Practice', 'Win a game at JLPT1'),
+    ('pl4', 'JLPT 4 Beaten!', 'Win a perfect game at JLPT4 or harder'),
+    ('pl3', 'JLPT 3 Beaten!', 'Win a perfect game at JLPT3 or harder'),
+    ('pl2', 'JLPT 2 Beaten!', 'Win a perfect game at JLPT2 or harder'),
+    ('pl1', 'JLPT 1 Beaten!', 'Win a perfect game at JLPT1');
