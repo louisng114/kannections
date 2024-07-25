@@ -12,8 +12,8 @@ const Game = ({ jlpt }) => {
     const [selectedKanji, setSelectedKanji] = useState([]);
     const [completedCategories, setCompletedCategories] = useState([]);
     const [perfect, setPerfect] = useState(true);
-    // TODO: add message for "one away", "incorrect", and "must select four"
     const [message, setMessage] = useState("");
+    const [showMessage, setShowMessage] = useState(false);
 
     const { user } = useContext(AuthContext);
 
@@ -51,8 +51,9 @@ const Game = ({ jlpt }) => {
 
     // check if selected kanji match any category
     const checkGroup = () => {
+        // Display message if less than 4 Kanji are selected
         if (selectedKanji.length < 4) {
-            alert("Must select four Kanji");
+            displayMessage("Must select four Kanji");
         } else {
             const category = categories.find(cat => 
                 cat.kanji.every(item => selectedKanji.includes(item))
@@ -64,11 +65,20 @@ const Game = ({ jlpt }) => {
                     win(user.username, jlpt, perfect);
                 }
             } else {
+                // Display message if the selected group is incorrect
                 setPerfect(false);
-                alert('Incorrect group, try again.');
+                displayMessage('Incorrect group; try again.');
             }
-            setSelectedKanji([]);
         }
+    };
+
+    // Display message for 1 second
+    const displayMessage = (text) => {
+        setMessage(text);
+        setShowMessage(true);
+        setTimeout(() => {
+            setShowMessage(false);
+        }, 1500);
     };
 
     if (categories.length !== 4) {
@@ -99,6 +109,8 @@ const Game = ({ jlpt }) => {
                 ))}
                 {completedCategories.length < 4 &&
                     <Button className="m-3" variant="dark" onClick={() => checkGroup()}>Submit</Button>}
+                {/* Display message */}
+                {showMessage && <div className="message">{message}</div>}
                 {/* display message and restart button upon winning */}
                 {completedCategories.length === 4 &&
                     <>
@@ -116,7 +128,7 @@ const Game = ({ jlpt }) => {
                 <tbody>
                     {categories.map((category, index) => (
                         <tr key={index}>
-                            <td className={`${completedCategories.includes(category.category) ? 'completed' : ''}`}>{category.category}</td>
+                            <td className={`${completedCategories.includes(category.category) ? `completed-${index}` : ''}`}>{category.category}</td>
                         </tr>
                     ))}
                 </tbody>

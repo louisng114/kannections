@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="spinner-border"
+    role="status"
+  >
+    <span
+      class="visually-hidden"
+    >
+      Loading...
+    </span>
+  </div>
+</DocumentFragment>
+`;

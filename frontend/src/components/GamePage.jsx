@@ -1,9 +1,15 @@
 import Game from "./Game";
+import HowToPlay from "./HowToPlay";
+import "./GamePage.css"
 
 const GamePage = ({ jlpt }) => {
     return (
-        // render game
-        <Game jlpt={jlpt} />
+        <div>
+            <div className="buttons-container">
+                <HowToPlay />
+            </div>
+            <Game jlpt={jlpt} />
+        </div>
     )
 };
 

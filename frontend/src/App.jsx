@@ -4,6 +4,7 @@ import "./App.css"
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import GamePage from "./components/GamePage";
+import ApiInfo from "./components/ApiInfo";
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import Profile from './components/Profile';
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/game3" element={<GamePage jlpt={3} />} />
                 <Route path="/game4" element={<GamePage jlpt={4} />} />
                 <Route path="/game5" element={<GamePage jlpt={5} />} />
+                <Route path="/apiinfo" element={<ApiInfo />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/login" element={<LoginForm />} />
                 <Route path="/signup" element={<SignupForm />} />

@@ -1,0 +1,155 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar Component > matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="bg-body-tertiary navbar navbar-expand-lg navbar-light bg-light fixed-top"
+  >
+    <div
+      class="d-flex justify-content-between container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <ruby>
+          漢
+          <rt>
+            KAN
+          </rt>
+        </ruby>
+        nections
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="mx-auto d-flex align-items-center navbar-nav"
+        >
+          <div
+            class="nav-item dropdown"
+          >
+            <a
+              aria-expanded="false"
+              class="dropdown-toggle nav-link"
+              href="#"
+              role="button"
+              tabindex="0"
+            >
+              Game
+            </a>
+          </div>
+        </div>
+        <div
+          class="d-flex align-items-center navbar-nav"
+        >
+          <a
+            class="btn btn-outline-info m-2"
+            href="/login"
+            role="button"
+            tabindex="0"
+          >
+            Log In
+          </a>
+          <a
+            class="btn btn-outline-success m-2"
+            href="/signup"
+            role="button"
+            tabindex="0"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="bg-body-tertiary navbar navbar-expand-lg navbar-light bg-light fixed-top"
+  >
+    <div
+      class="d-flex justify-content-between container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <ruby>
+          漢
+          <rt>
+            KAN
+          </rt>
+        </ruby>
+        nections
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="mx-auto d-flex align-items-center navbar-nav"
+        >
+          <div
+            class="nav-item dropdown"
+          >
+            <a
+              aria-expanded="false"
+              class="dropdown-toggle nav-link"
+              href="#"
+              role="button"
+              tabindex="0"
+            >
+              Game
+            </a>
+          </div>
+        </div>
+        <div
+          class="d-flex align-items-center navbar-nav"
+        >
+          <a
+            class="btn btn-outline-info m-2"
+            href="/login"
+            role="button"
+            tabindex="0"
+          >
+            Log In
+          </a>
+          <a
+            class="btn btn-outline-success m-2"
+            href="/signup"
+            role="button"
+            tabindex="0"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

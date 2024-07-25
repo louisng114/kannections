@@ -1,3 +1,21 @@
+.message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.board {
+    position: relative;
+    z-index: 1;
+}
+
 .selected {
     background-clip: padding-box;
     background-color: lightgray;
@@ -19,6 +37,18 @@ table td {
     transition: background-color 0.5s ease; /* color transition */
 }
 
-table td.completed {
-    background-color: #FFFAA0;
+table td.completed-0 {
+    background-color: #f7e16d;
+}
+
+table td.completed-1 {
+    background-color: #9cc55b;
+}
+
+table td.completed-2 {
+    background-color: #b2c2ef;
+}
+
+table td.completed-3 {
+    background-color: #bd7fc5;
 }
