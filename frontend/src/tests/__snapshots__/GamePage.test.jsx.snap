@@ -9,6 +9,7 @@ exports[`matches snapshot 1`] = `
       <div>
         <svg
           aria-hidden="true"
+          aria-label="How to play"
           class="svg-inline--fa fa-circle-question how-to-play-button"
           data-icon="circle-question"
           data-prefix="far"
@@ -29,7 +30,7 @@ exports[`matches snapshot 1`] = `
       role="status"
     >
       <span
-        class="visually-hidden"
+        class="visually-hidden loading"
       >
         Loading...
       </span>

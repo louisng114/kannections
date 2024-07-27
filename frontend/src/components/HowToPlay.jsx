@@ -8,7 +8,7 @@ const HowToPlay = () => {
 
     return (
         <div>
-            <FontAwesomeIcon  className="how-to-play-button" onClick={() => setShowHowToPlay(true)} icon={faCircleQuestion} />
+            <FontAwesomeIcon  className="how-to-play-button" onClick={() => setShowHowToPlay(true)} icon={faCircleQuestion} aria-label="How to play" />
             {showHowToPlay && (
                 <div className="overlay" onClick={() => setShowHowToPlay(false)}>
                     <div className="how-to-play-content" onClick={(e) => e.stopPropagation()}>

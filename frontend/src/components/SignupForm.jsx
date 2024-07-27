@@ -24,7 +24,7 @@ const SignupForm = () => {
                 await signup(values.username, values.password);
                 navigate('/');
             } catch (error) {
-                formik.setFieldError('general', 'Invalid credentials');
+                formik.setFieldError('general', error);
             }
         },
     });

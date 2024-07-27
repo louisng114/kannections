@@ -1,9 +1,12 @@
 import { useState, useContext, useEffect } from 'react';
+import { Spinner, Container, Row, Col, Button, Table } from "react-bootstrap";
 import { AuthContext } from '../context/AuthContext';
 import fetchKanji from "../helpers/fetchKanji";
 import win from "../helpers/win";
+import correctSound from "../assets/correctSound.wav";
+import wrongSound from "../assets/wrongSound.wav";
+import winSound from "../assets/winSound.wav";
 import KanjiPanel from "./KanjiPanel.jsx";
-import { Spinner, Container, Row, Col, Button, Table } from "react-bootstrap";
 import "./Game.css";
 
 const Game = ({ jlpt }) => {
@@ -16,6 +19,11 @@ const Game = ({ jlpt }) => {
     const [showMessage, setShowMessage] = useState(false);
 
     const { user } = useContext(AuthContext);
+
+    // Create audio objects for sound effects
+    const correctAudio = new Audio(correctSound);
+    const wrongAudio = new Audio(wrongSound);
+    const winAudio = new Audio(winSound);
 
     // get categories on page load with useEffect
     const getCategories = async () => {
@@ -53,6 +61,7 @@ const Game = ({ jlpt }) => {
     const checkGroup = () => {
         // Display message if less than 4 Kanji are selected
         if (selectedKanji.length < 4) {
+            wrongAudio.play();
             displayMessage("Must select four Kanji");
         } else {
             const category = categories.find(cat => 
@@ -61,17 +70,37 @@ const Game = ({ jlpt }) => {
             if (category) {
                 setCompletedCategories((categories) => [...categories, category.category]);
                 setShuffledKanji(shuffledKanji.filter(kanji => !selectedKanji.includes(kanji)));
-                if (user && completedCategories.length === 3) {
-                    win(user.username, jlpt, perfect);
+                if (completedCategories.length === 3) {
+                    winAudio.play();
+                    if (user) {
+                        win(user.username, jlpt, perfect);
+                    }
+                } else {
+                    correctAudio.play();
                 }
+                setSelectedKanji([]);
+            } else if (isOneAway()) {
+                // Display message if the selected group is one away
+                setPerfect(false);
+                wrongAudio.play();
+                displayMessage('One away')
             } else {
                 // Display message if the selected group is incorrect
                 setPerfect(false);
+                wrongAudio.play();
                 displayMessage('Incorrect group; try again.');
             }
         }
     };
 
+    // Check if the selected kanji are one away from a category
+    const isOneAway = () => {
+        return categories.some(cat => {
+            const matchingKanji = cat.kanji.filter(item => selectedKanji.includes(item));
+            return matchingKanji.length === 3;
+        });
+    };
+    
     // Display message for 1 second
     const displayMessage = (text) => {
         setMessage(text);
@@ -84,7 +113,7 @@ const Game = ({ jlpt }) => {
     if (categories.length !== 4) {
         return (
             <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
+                <span className="visually-hidden loading">Loading...</span>
             </Spinner>
         )
     }

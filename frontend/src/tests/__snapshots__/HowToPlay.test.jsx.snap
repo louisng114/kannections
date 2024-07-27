@@ -1,10 +1,11 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`matches snapshot 1`] = `
+exports[`HowToPlay Component > matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <svg
       aria-hidden="true"
+      aria-label="How to play"
       class="svg-inline--fa fa-circle-question how-to-play-button"
       data-icon="circle-question"
       data-prefix="far"
