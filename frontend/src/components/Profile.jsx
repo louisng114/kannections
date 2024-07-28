@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { Card, ListGroup, Table } from 'react-bootstrap';
 import { AuthContext } from '../context/AuthContext';
-import KannectionsApi from '../../../api';
+import KannectionsApi from '../helpers/api';
 import "./Profile.css"
 
 const Profile = () => {

@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { jwtDecode } from "jwt-decode";
-import KannectionsApi from '../../../api';
+import KannectionsApi from '../helpers/api';
 
 const AuthContext = createContext();
 

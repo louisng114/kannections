@@ -19,7 +19,7 @@ const mockAchievements = [
 
 
 // Mock KannectionsApi methods
-vi.mock('../../../api', () => ({
+vi.mock('../helpers/api', () => ({
   default: {
     getUser: vi.fn(() => Promise.resolve(mockUser)),
     getAllAchievements: vi.fn(() => Promise.resolve(mockAchievements)),

@@ -1,4 +1,4 @@
-import KannectionsApi from "../../../api";
+import KannectionsApi from "./api";
 
 const win = async (username, jlpt, perfect) => {
     let totalWins = 0;
