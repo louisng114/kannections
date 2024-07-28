@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.DATABASE_URL || "http://localhost:3001";
+const BASE_URL = process.env.DATABASE_URL || "http://localhost:3001";
 
 /** API Class.
  *
