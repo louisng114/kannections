@@ -21,9 +21,11 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.use(authenticateJWT);
 
+const allowedOrigin = process.env.ALLOWED_ORIGIN || "http://localhost:5173";
+
 // set up cors for API proxy
 const corsOptions = {
-  origin: 'http://localhost:5173', // React app port
+  origin: `${allowedOrigin}`,
   methods: 'GET, PATCH, POST',
   optionsSuccessStatus: 204
 };
