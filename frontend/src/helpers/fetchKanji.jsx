@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const fetchKanji = async (jlpt) => {
-    const BASE_URL = "http://localhost:3001/api/v1/kanji";
+    const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001/api/v1/kanji";
 
     // arrays to store results
     const idSet = new Set();
@@ -72,9 +72,6 @@ const fetchKanji = async (jlpt) => {
     // get four Kanji used in words ending in the given hiragana
     const getVerb = async (char) => {
         const data = [];
-        console.log("char:");
-        console.log(char);
-
         try {
             // excludes numbers from the request
             if (char === "つ") {
@@ -227,8 +224,6 @@ const fetchKanji = async (jlpt) => {
         }
         const randomVerbEndingIndex = Math.floor(Math.random() * verbEndingsArrayLength);
         await getVerb(verbEndingsArray[randomVerbEndingIndex]);
-
-        console.log(categoryObjectArray);
 
         attempt++;
     }
