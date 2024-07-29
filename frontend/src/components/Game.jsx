@@ -32,7 +32,6 @@ const Game = ({ jlpt }) => {
     }
 
     useEffect(() => {
-        console.log("Game component mounted"); // Debugging
         getCategories();
     }, []);
 

@@ -16,8 +16,6 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* debugging */}
-                <Route path="/game" element={<GamePage />} />
                 <Route path="/game1" element={<GamePage jlpt={1} />} />
                 <Route path="/game2" element={<GamePage jlpt={2} />} />
                 <Route path="/game3" element={<GamePage jlpt={3} />} />

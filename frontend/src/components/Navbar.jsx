@@ -21,11 +21,11 @@ const Navbar = () => {
                     <Nav className="mx-auto d-flex align-items-center">
                         {/* dropdown menu for starting game */}
                         <NavDropdown title="Game">
-                            <NavDropdown.Item href="/game5">JLPT 5</NavDropdown.Item>
-                            <NavDropdown.Item href="/game4">JLPT 4</NavDropdown.Item>
-                            <NavDropdown.Item href="/game3">JLPT 3</NavDropdown.Item>
-                            <NavDropdown.Item href="/game2">JLPT 2</NavDropdown.Item>
-                            <NavDropdown.Item href="/game1">JLPT 1</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/game5">JLPT 5</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/game4">JLPT 4</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/game3">JLPT 3</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/game2">JLPT 2</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/game1">JLPT 1</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/apiinfo">About the API</Nav.Link>
                     </Nav>
