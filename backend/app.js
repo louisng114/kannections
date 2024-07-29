@@ -42,11 +42,11 @@ app.use('/api/v1/kanji', async (req, res) => {
   try {
     const apiUrl = new URL('http://ec2-13-60-36-124.eu-north-1.compute.amazonaws.com/api/v1/kanji?size=3000');
     const response = await axios.get(apiUrl.href, {
-      responseType: 'json', // Changed from 'stream' to 'json'
+      responseType: 'json',
       params: req.query
     });
 
-    res.status(200).json(response.data); // Send the JSON data directly
+    res.status(200).json(response.data);
   } catch (error) {
     console.error("Error proxying request:", error.message);
     res.status(500).json({ error: 'Error proxying request' });

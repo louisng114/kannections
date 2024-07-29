@@ -3,6 +3,8 @@ import axios from "axios";
 const fetchKanji = async (jlpt) => {
     const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001/api/v1/kanji";
 
+    console.log("Base URL:", BASE_URL);  // Debugging
+
     // arrays to store results
     const idSet = new Set();
     const categoryObjectArray = [];
