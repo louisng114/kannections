@@ -9,4 +9,5 @@ export default defineConfig({
     globals: true, // Enable global variables for testing
     exclude: [...configDefaults.exclude, 'node_modules/**'], // Exclude node_modules from tests
   },
+  base: '/',
 });
