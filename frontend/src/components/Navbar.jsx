@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Navbar as BNavbar, Nav, NavDropdown, Button, Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -28,6 +30,10 @@ const Navbar = () => {
                             <NavDropdown.Item as={Link} to="/game1">JLPT 1</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/apiinfo">About the API</Nav.Link>
+                        <Nav.Link href="https://github.com/louisng114/kannections" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} className="mr-2" />
+                            GitHub
+                        </Nav.Link>
                     </Nav>
                     <Nav className="d-flex align-items-center">
                         {!user ? (
