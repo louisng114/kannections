@@ -27,7 +27,7 @@ const Navbar = () => {
                             <NavDropdown.Item href="/game2">JLPT 2</NavDropdown.Item>
                             <NavDropdown.Item href="/game1">JLPT 1</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link as={Link} to="/ApiInfo">About the API</Nav.Link>
+                        <Nav.Link as={Link} to="/apiinfo">About the API</Nav.Link>
                     </Nav>
                     <Nav className="d-flex align-items-center">
                         {!user ? (

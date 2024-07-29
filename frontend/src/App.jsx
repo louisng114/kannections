@@ -16,6 +16,8 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
+                {/* debugging */}
+                <Route path="/game" element={<GamePage />} />
                 <Route path="/game1" element={<GamePage jlpt={1} />} />
                 <Route path="/game2" element={<GamePage jlpt={2} />} />
                 <Route path="/game3" element={<GamePage jlpt={3} />} />
@@ -25,6 +27,7 @@ const App = () => {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/login" element={<LoginForm />} />
                 <Route path="/signup" element={<SignupForm />} />
+                <Route path="*" element={<div>{"Error 404 page not found. :("}</div>} />
             </Routes>
         </BrowserRouter>
     );
