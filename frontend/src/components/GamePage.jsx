@@ -3,6 +3,7 @@ import HowToPlay from "./HowToPlay";
 import "./GamePage.css"
 
 const GamePage = ({ jlpt }) => {
+    console.log("Rendering GamePage"); // Debugging
     return (
         <div>
             <div className="buttons-container">
