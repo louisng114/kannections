@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Spinner, Container, Row, Col, Button, Table } from "react-bootstrap";
 import { AuthContext } from '../context/AuthContext';
 import fetchKanji from "../helpers/fetchKanji";
