@@ -144,7 +144,7 @@ const Game = ({ jlpt }) => {
                 {completedCategories.length === 4 &&
                     <>
                         <p className="yatta">やった！</p>
-                        <Button className="m-3" variant="dark" onClick={() => window.location.reload()}>Start Over!</Button>
+                        <Button className="m-3" variant="dark" as={Link} to={`/game${jlpt}`}>Start Over!</Button>
                     </>}
             </Container>
             {/* show categories */}
